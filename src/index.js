@@ -1,3 +1,4 @@
 import { loadHomePage } from "./home-page";
+import { loadMenu, menuItems } from "./menu";
 
-loadHomePage();
+loadMenu(menuItems);
