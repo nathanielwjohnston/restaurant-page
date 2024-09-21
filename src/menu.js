@@ -49,8 +49,6 @@ function loadMenu (menuItems) {
     sectionContainer.appendChild(sectionHeading);
 
     for (const item of menuItems[section]) {
-      console.log(item);
-
       const itemContainer = document.createElement("div");
 
       const itemHeading = document.createElement("h3");
