@@ -1,4 +1,7 @@
-import { loadHomePage } from "./home-page";
+import { loadHomePage } from "./home";
 import { loadMenu, menuItems } from "./menu";
+import { loadContactPage } from "./contact";
 
-loadMenu(menuItems);
+import "./styles.css";
+
+loadContactPage();
