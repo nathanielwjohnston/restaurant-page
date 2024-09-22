@@ -47,7 +47,43 @@ body {
 
 *, body {
   --accent-colour-one: #F8D030;
+  --accent-colour-one-darker: #FAB630;
   --accent-colour-two: #C0ECE6;
   --brown: #B07229;
   --grey: #282828;
+}
+
+/* ==========================================================================
+  Header 
+  ========================================================================== */
+
+header {
+  padding: 2em;
+  background-color: var(--accent-colour-one);
+}
+
+/* Nav */
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 24rem;
+}
+
+nav button {
+  padding: 1rem 3rem;
+  margin: 0 4rem;
+  border: 2px solid var(--grey);
+  border-radius: 0.3em;
+  background-color: var(--accent-colour-one);
+  color: var(--grey);
+}
+
+nav button:hover {
+  cursor: pointer;
+  background-color: var(--accent-colour-one-darker);
+}
+
+nav button.current-tab {
+  background-color: var(--accent-colour-one-darker);
 }
