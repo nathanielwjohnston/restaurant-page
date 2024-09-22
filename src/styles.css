@@ -2,24 +2,52 @@
   Reset 
   ========================================================================== */
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  input, button, textarea, select {
-    font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* ==========================================================================
+  General 
+  ========================================================================== */
+
+/* Fonts */
+
+/* Font from https://www.fontspace.com/spongeboytt2-font-f41984 by SoulfurFTG */
+@font-face {
+  font-family: 'spongebob-font';
+  src: url('/assets/Spongeboytt2Regular-ALLjx.ttf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: 'spongebob-font', 'Segoe Print', 'Bradley Hand', 
+    Chilanka, TSCu_Comic, casual, cursive, serif;
+}
+
+/* Variables */
+
+*, body {
+  --accent-colour-one: #F8D030;
+  --accent-colour-two: #C0ECE6;
+  --brown: #B07229;
+  --grey: #282828;
+}
