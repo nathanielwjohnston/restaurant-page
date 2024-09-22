@@ -34,6 +34,8 @@ const menuItems = {
 function loadMenu (menuItems) {
 
   const pageContent = document.querySelector("#content");
+  const menuContainer = document.createElement("div");
+  menuContainer.id = "menu-container"
 
   for (const section in menuItems) {
     const sectionContainer = document.createElement("div");
@@ -89,9 +91,10 @@ function loadMenu (menuItems) {
     }
 
     sectionContainer.appendChild(itemsContainer);
-    pageContent.appendChild(sectionContainer);
+    menuContainer.appendChild(sectionContainer);
   }
 
+  pageContent.appendChild(menuContainer);
 }
 
 export { loadMenu, menuItems };

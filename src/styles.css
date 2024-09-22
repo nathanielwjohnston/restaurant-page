@@ -87,3 +87,32 @@ nav button:hover {
 nav button.current-tab {
   background-color: var(--accent-colour-one-darker);
 }
+
+/* ==========================================================================
+  Content 
+  ========================================================================== */
+
+#content {
+  padding: 2rem;
+}
+/* Home */
+/* Menu */
+
+#menu-container h2 {
+  margin: 1rem 0;
+  color: var(--accent-colour-one-darker);
+}
+
+#menu-container .item-options {
+  padding-left: 0.8rem;
+}
+
+#menu-container .item-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+  margin: 0 2rem;
+}
+
+
+/* Contact */
