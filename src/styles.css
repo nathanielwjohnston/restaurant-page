@@ -136,12 +136,13 @@ nav button.current-tab {
 
 
 /* Contact */
+
 #contact-container {
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10rem;
-  height: 100%;
+  height: 80%;
   width: 55rem;
 }
 
@@ -189,4 +190,34 @@ nav button.current-tab {
 
 #form-container form input, #message-input {
   padding: 0.2rem;
+}
+
+/* Footer */ 
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+}
+
+footer div {
+  background-color: var(--accent-colour-two);
+  width: 100%;
+  padding: 1rem 0;
+}
+
+footer div a:visited {
+  color: black;
+}
+
+footer div a:hover {
+  color: var(--grey);
 }
