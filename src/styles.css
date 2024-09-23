@@ -49,6 +49,7 @@ body {
   --accent-colour-one: #F8D030;
   --accent-colour-one-darker: #FAB630;
   --accent-colour-two: #C0ECE6;
+  --accent-colour-two-darker: #5dcebf;
   --brown: #B07229;
   --grey: #282828;
 }
@@ -94,6 +95,8 @@ nav button.current-tab {
 
 #content {
   padding: 2rem;
+  display: grid;
+  justify-items: center;
 }
 /* Home */
 /* Menu */
@@ -116,3 +119,57 @@ nav button.current-tab {
 
 
 /* Contact */
+#contact-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  height: 100%;
+  width: 55rem;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#form-container button {
+  width: 50%;
+  align-self: center;
+  padding: 0.6rem;
+  text-align: center;
+  border-radius: 0.3em;
+  background-color: var(--accent-colour-two);
+  color: var(--grey);
+}
+
+#form-container button:hover {
+  cursor: pointer;
+  background-color: var(--accent-colour-two-darker);
+}
+
+#details-container, #form-container {
+  border: 2px solid var(--grey);
+  border-radius: 0.3em;
+  padding: 2rem;
+}
+
+#contact-container #details-container {
+  display: grid;
+}
+
+#message-input {
+  resize: none;
+  height: 6rem;
+}
+
+#form-container form input, #message-input {
+  padding: 0.2rem;
+}

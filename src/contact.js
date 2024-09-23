@@ -1,3 +1,5 @@
+import getLocationContainer from "./location";
+
 function loadContactPage () {
   const pageContent = document.querySelector("#content");
 
@@ -29,6 +31,7 @@ function loadContactPage () {
   detailsContainer.id = "details-container";
   detailsContainer.appendChild(emailContainer);
   detailsContainer.appendChild(telephoneContainer);
+  detailsContainer.append(getLocationContainer());
 
   const formContainer = document.createElement("div");
   formContainer.id = "form-container";
@@ -38,6 +41,7 @@ function loadContactPage () {
   formHeading.appendChild(formHeadingNode);
   formContainer.appendChild(formHeading);
   const form = document.createElement("form");
+  form.id = "contact-form";
 
   const nameLabel = document.createElement("label");
   nameLabel.setAttribute("for", "name-input");
@@ -46,6 +50,7 @@ function loadContactPage () {
 
   const nameInput = document.createElement("input");
   nameInput.id = "name-input";
+  nameInput.required = true;
 
   const emailLabel = document.createElement("label");
   emailLabel.setAttribute("for", "email-input");
@@ -55,6 +60,7 @@ function loadContactPage () {
   const emailInput = document.createElement("input");
   emailInput.id = "email-input";
   emailInput.setAttribute("type", "email");
+  emailInput.required = true;
 
   const messageLabel = document.createElement("label");
   messageLabel.setAttribute("for", "message-input");
@@ -63,15 +69,17 @@ function loadContactPage () {
 
   const messageInput = document.createElement("textarea");
   messageInput.id = "message-input";
+  messageInput.required = true;
 
   const submitButton = document.createElement("button");
   submitButton.setAttribute("type", "submit");
   const submitNode = document.createTextNode("Submit");
   submitButton.appendChild(submitNode);
+  submitButton.setAttribute("form", "contact-form");
+
 
   const formElements = [
-    nameLabel, nameInput, emailLabel, emailInput, messageLabel, messageInput,
-    submitButton
+    nameLabel, nameInput, emailLabel, emailInput, messageLabel, messageInput
   ];
 
   for (let element of formElements) {
@@ -79,6 +87,8 @@ function loadContactPage () {
   }
 
   formContainer.appendChild(form);
+
+  formContainer.appendChild(submitButton);
 
   const contactContainer = document.createElement("div");
   contactContainer.id = "contact-container";
