@@ -67,6 +67,7 @@ header {
 
 nav {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 24rem;
 }
@@ -98,7 +99,23 @@ nav button.current-tab {
   display: grid;
   justify-items: center;
 }
+
 /* Home */
+
+#home-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#home-container {
+  width: 80%;
+  position: sticky;
+}
+
+#home-info * {
+  margin-bottom: 1rem;
+}
+
 /* Menu */
 
 #menu-container h2 {
